@@ -59,7 +59,7 @@ Angular
 Axios
 Cheerio
 
-### testing dependencies
+### Testing dependencies
 
 Mocha
 Chai
