@@ -1,27 +1,70 @@
-# ScrapingApp
+## Author
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+Lino John
 
-## Development server
+# Scraping App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is a web application that scrapes a website and displays the scraped data in a sorted manner. The application is built using Node.js, Express.js, and Angular.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the repository.
+Install dependencies by running npm install the root directory.
 
-## Build
+Run `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running unit test
 
-## Running unit tests
+Run `npm test` to execute the unit test via [Chai] will print the json result in the console.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Build the Angular app for production by running the following command in the project's root directory:
 
-## Running end-to-end tests
+Run `ng build --configuration production`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Start the server by running the following command:
 
-## Further help
+Run `node server/app.js`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Now, accessing `http://localhost:3000` will serve the Angular app, and the API request to /api/scrape will be handled by the server-side code. The Angular component will render the scraped data in the browser.
+
+## Code Structure
+
+The server code is located in the `server` directory
+
+### app.js:
+
+This file contains the main server code, including the routes and middleware.
+
+The client code is located in the src directory and is split into several files:
+
+### app.component.ts:
+
+This file contains the main component code, including the code for retrieving the scraped data from the server.
+
+### scraping.component.ts:
+
+This file contains the code for displaying the scraped data in a table.
+
+Test code located in the src directory `test` directory.
+
+### test/server.test.ts :
+
+This file contains the test code for the server test.
+
+## Technologies Used
+
+Node.js
+Express.js
+Angular
+Axios
+Cheerio
+
+### testing dependencies
+
+Mocha
+Chai
+Supertest
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more information.

@@ -1,0 +1,14 @@
+<h1>Scraped Product Options</h1>
+<ul class="product-list">
+  <li *ngFor="let product of products" class="product-item">
+    <h3>{{ product.title }}</h3>
+    <p class="description">Description: {{ product.description }}</p>
+    <p class="price">Annual Price: {{ product.price }}</p>
+    <p class="discount">
+      Discount:
+      <span [ngClass]="{ highlighted: product.discount === null }">
+        {{ product.discount ? product.discount : "No discount available" }}
+      </span>
+    </p>
+  </li>
+</ul>
